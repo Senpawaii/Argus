@@ -1,0 +1,3 @@
+{
+  "sentryDsn": "http://<public-key>@localhost:9000/<project-id>"
+}
