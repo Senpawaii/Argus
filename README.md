@@ -51,6 +51,14 @@ cd web && npm install && npm start        # :4200 (proxies /api to :3000)
 | 5 | Shop + Checkout | add *Boots of Slightly Faster* (out of stock), pay | unhandled 409 |
 | 6 | `/cart` | open it with an empty cart | `TypeError ... reading 'product'` |
 
+## App features
+
+Category filter, sorting, search, wishlist (persisted), cart with quantity stepper, coupons, checkout, order confirmation + history (persisted in localStorage), toasts, light/dark theme.
+
+## Design system
+
+Tokens in `web/src/styles/tokens.scss` (colour, spacing, radius, shadow; light + dark), base/utility classes in `base.scss` (`.ui-card`, `.ui-btn`, `.ui-chip`, `.ui-table`...), Angular primitives in `web/src/app/ui/` (`uiBtn`, `ui-badge`, `ui-qty-stepper`, `ui-empty-state`, `Toasts`). Consistent, high-contrast UI makes Session Replay easy to follow.
+
 ## Sentry features wired up
 
 - **Errors**: `Sentry.createErrorHandler()` as Angular `ErrorHandler`

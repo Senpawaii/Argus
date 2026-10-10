@@ -1,0 +1,7 @@
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-4); }
+.product { display: flex; flex-direction: column; gap: var(--space-3); }
+.top { display: flex; justify-content: space-between; align-items: center; }
+.emoji { font-size: 4rem; text-align: center; text-decoration: none; padding: var(--space-3) 0; background: var(--color-surface-2); border-radius: var(--radius-md); }
+.name { color: var(--color-text); font-weight: 700; text-decoration: none; }
+.name:hover { color: var(--color-primary); }
+.ui-chip { text-transform: capitalize; }

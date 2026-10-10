@@ -21,6 +21,11 @@ export class Cart {
     Sentry.addBreadcrumb({ category: 'cart', message: `Added ${product.name}`, level: 'info' });
   }
 
+  setQty(id: number, qty: number) {
+    if (qty <= 0) return this.remove(id);
+    this.lines.update((ls) => ls.map((l) => (l.product.id === id ? { ...l, qty } : l)));
+  }
+
   remove(id: number) {
     this.lines.update((ls) => ls.filter((l) => l.product.id !== id));
   }

@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Product } from './models';
+import { Product, ProductSummary } from './models';
 
 @Injectable({ providedIn: 'root' })
 export class ShopApi {
   private readonly http = inject(HttpClient);
 
   products(q = '') {
-    return this.http.get<Omit<Product, 'specs'>[]>('/api/products', { params: q ? { q } : {} });
+    return this.http.get<ProductSummary[]>('/api/products', { params: q ? { q } : {} });
   }
   product(id: number) {
     return this.http.get<Product>(`/api/products/${id}`);

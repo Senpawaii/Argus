@@ -7,14 +7,14 @@ app.use(express.json());
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const products = [
-  { id: 1, name: 'Cloak of Mild Annoyance', price: 49.9, emoji: '🧥', stock: 12, specs: { weight: '1.2kg', material: 'wool' } },
-  { id: 2, name: 'Potion of Minor Healing', price: 9.5, emoji: '🧪', stock: 80, specs: { weight: '0.3kg', material: 'glass' } },
-  { id: 3, name: 'Staff of Moderate Gusts', price: 129, emoji: '🪄', stock: 3, specs: { weight: '2.1kg', material: 'oak' } },
-  { id: 4, name: 'Boots of Slightly Faster', price: 74.25, emoji: '🥾', stock: 0, specs: { weight: '1.5kg', material: 'leather' } },
-  { id: 5, name: 'Amulet of Vague Luck', price: 33, emoji: '📿', stock: 21, specs: { weight: '0.1kg', material: 'silver' } },
-  { id: 6, name: 'Scroll of Eventual Fire', price: 18, emoji: '📜', stock: 40, specs: { weight: '0.05kg', material: 'paper' } },
+  { id: 1, category: 'apparel', name: 'Cloak of Mild Annoyance', price: 49.9, emoji: '🧥', stock: 12, specs: { weight: '1.2kg', material: 'wool' } },
+  { id: 2, category: 'consumable', name: 'Potion of Minor Healing', price: 9.5, emoji: '🧪', stock: 80, specs: { weight: '0.3kg', material: 'glass' } },
+  { id: 3, category: 'weapon', name: 'Staff of Moderate Gusts', price: 129, emoji: '🪄', stock: 3, specs: { weight: '2.1kg', material: 'oak' } },
+  { id: 4, category: 'apparel', name: 'Boots of Slightly Faster', price: 74.25, emoji: '🥾', stock: 0, specs: { weight: '1.5kg', material: 'leather' } },
+  { id: 5, category: 'accessory', name: 'Amulet of Vague Luck', price: 33, emoji: '📿', stock: 21, specs: { weight: '0.1kg', material: 'silver' } },
+  { id: 6, category: 'consumable', name: 'Scroll of Eventual Fire', price: 18, emoji: '📜', stock: 40, specs: { weight: '0.05kg', material: 'paper' } },
   // Seeded bug #1: no `specs` -> the product page dereferences it and throws.
-  { id: 13, name: 'Mystery Box', price: 99, emoji: '🎁', stock: 5 },
+  { id: 13, category: 'misc', name: 'Mystery Box', price: 99, emoji: '🎁', stock: 5 },
 ];
 
 app.get('/api/products', async (req, res) => {

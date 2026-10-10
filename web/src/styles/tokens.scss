@@ -1,0 +1,65 @@
+// Design tokens: every colour, space, radius and shadow used by the app comes from here.
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-size-sm: .8125rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2.25rem;
+
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --color-primary: #6c4cf5;
+  --color-primary-hover: #5a3ae0;
+  --color-primary-soft: #ece8ff;
+  --color-on-primary: #ffffff;
+  --color-bg: #f6f5fb;
+  --color-surface: #ffffff;
+  --color-surface-2: #efedf7;
+  --color-text: #1e1b2e;
+  --color-muted: #6a6585;
+  --color-border: #dcd8ec;
+  --color-success: #12805c;
+  --color-success-soft: #dcf5ea;
+  --color-warning: #a15c00;
+  --color-warning-soft: #fdf0d5;
+  --color-danger: #c4254b;
+  --color-danger-soft: #fde3ea;
+  --color-header: #2b2350;
+
+  --shadow-1: 0 1px 2px rgb(30 27 46 / .08), 0 1px 3px rgb(30 27 46 / .06);
+  --shadow-2: 0 8px 24px rgb(30 27 46 / .14);
+  --focus-ring: 0 0 0 3px rgb(108 76 245 / .35);
+}
+
+[data-theme='dark'] {
+  --color-primary: #8f78ff;
+  --color-primary-hover: #a592ff;
+  --color-primary-soft: #2d2655;
+  --color-on-primary: #14102b;
+  --color-bg: #14111f;
+  --color-surface: #1d1930;
+  --color-surface-2: #272240;
+  --color-text: #efecfa;
+  --color-muted: #a39dc2;
+  --color-border: #3a3459;
+  --color-success: #4fd1a1;
+  --color-success-soft: #123d30;
+  --color-warning: #f3b64f;
+  --color-warning-soft: #3d2d0f;
+  --color-danger: #ff7a97;
+  --color-danger-soft: #4a1827;
+  --color-header: #0e0b1c;
+  --shadow-1: 0 1px 2px rgb(0 0 0 / .4);
+  --shadow-2: 0 8px 24px rgb(0 0 0 / .5);
+}
